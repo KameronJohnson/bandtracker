@@ -7,4 +7,33 @@
 <h4><a href="/venues">Add Venue</a></h4>
 <br>
 
+
 <h5>Bands entered:</h5>
+
+  <% if @bands.any?() %>
+
+    <ul>
+      <% @bands.each do |band| %>
+        <li><a href="/bands/<%= band.id() %>"><%= band.name() %></a></li>
+      <% end %>
+    </ul>
+
+  <% else %>
+    <p><em>no bands added</em></p>
+  <% end %>
+
+<br>
+
+<h5>Venues entered:</h5>
+
+  <% if @venues.any?() %>
+
+    <ul>
+      <% @venues.each do |venue| %>
+        <li><a href="/venues/<%= venue.id() %>"><%= venue.name() %></a></li>
+      <% end %>
+    </ul>
+
+  <% else %>
+    <p><em>no venues added</em></p>
+  <% end %>

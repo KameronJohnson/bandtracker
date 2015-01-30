@@ -8,3 +8,22 @@
 
   <button type="submit" class="btn btn-sm btn-primary">Add Band</button>
 </form>
+
+<br>
+
+<% if @bands.any?() %>
+
+  <ul>
+    <% @bands.each do |band| %>
+      <li><a href="/bands/<%= band.id() %>"><%= band.name() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p><em>no bands added</em></p>
+<% end %>
+
+<br>
+
+<p><a href="/venues">[See all venues]</a></p>
+
+<p><a href="/">[Go back home]</a></p>
