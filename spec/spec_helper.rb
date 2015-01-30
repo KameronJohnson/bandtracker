@@ -5,7 +5,7 @@ Bundler.require(:default, :test)
 
 Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require file }
 
-Rspec.configure do |config|
+RSpec.configure do |config|
   config.after(:each) do
     Band.all().each() do |band|
       band.destroy()
