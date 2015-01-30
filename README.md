@@ -8,9 +8,9 @@ Bandtracker is a website that uses a database and Sinatra to allow users to inpu
 Installation
 ------------
 
-Install Train System by first cloning the repository.  
+Install by first cloning the repository.  
 ```
-$ git clone http://github.com/kameronjohnson/hair_salon.git
+$ git clone http://github.com/kameronjohnson/bandtracker.git
 ```
 
 Install all of the required gems:
